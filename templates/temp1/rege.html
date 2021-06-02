@@ -1,0 +1,94 @@
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>会员注册资料</title>
+  </head>
+    <body>
+        <form name="form1" id=form1 action="zhuce" method="post">
+            {% csrf_token %}
+          <table align="center">
+            <tr>
+              <td><h1><strong>在此填写会员注册资料</strong></h1></td>
+            </tr>
+
+          <tr>
+        <td><font color="blue">账户信息</font></td>
+          </tr>
+
+          <tr>
+        <td>会员名&nbsp;:<input type="text" name="user" id="user" value="请输入会员名" size=20 /></td>
+          </tr>
+
+           <tr>
+        <td>登陆密码:<input type="password" name="pwd" id="pwd"  size=20 /></td>
+          </tr>
+
+           <tr>
+        <td><font color="blue">个人资料</font></td>
+          </tr>
+
+           <tr>
+        <td>性别: <input type="radio" name="gender" id="gender" value="男" checked="true"/>男&nbsp;<input type="radio" name="gender" id="gender" value="女" />女</td>
+          </tr>
+
+           <tr>
+        <td>婚姻状况:<input type="radio" name="wedding" id="wedding1" value="已婚"  checked="true"/>已婚
+                     <input type="radio" name="wedding" id="wedding1" value="未婚" />未婚
+        </td>
+{#               <script language="JavaScript">#}
+{#                   function Choose(obj) {#}
+{#                       var ss=document.getElementsByName("wedding")#}
+{#                       for(var i =0;i<ss.length;i++){#}
+{#                           ss[i].checked=false;#}
+{#                       }#}
+{#                       obj.checked(true);#}
+{#                   }#}
+{#               </script>#}
+          </tr>
+
+           <tr>
+        <td>兴趣爱好:<input type="checkbox" name="trip" id="trip" value="旅行" checked="true"/>旅行
+                     <input type="checkbox" name="trip" id="game" value="游戏" />游戏
+                     <input type="checkbox" name="trip" id="shopping" value="购物" checked="true"/>购物
+                     <input type="checkbox" name="trip" id="chat" value="聊天" />聊天
+                     <input type="checkbox" name="trip" id="play" value="泡吧" />泡吧
+                     <input type="checkbox" name="trip" id="play" value="学习" checked="true"/>学习
+        </td>
+
+          </tr>
+
+           <tr>
+        <td>相片:<input type="file" src="" value="pic"></td>
+          </tr>
+
+          <tr>
+              <td>年龄:<input type="text" name="age" id="ageid" size="2">岁
+{#                <select name="xiala" >#}
+{#                 <option name="nianlin" value="21">21</option>#}
+{#                 <option name="nianlin" value="22">22</option>#}
+{#                 <option name="nianlin" value="23">23</option>#}
+{#                 <option name="nianlin" value="24">24</option>#}
+{#                <option name="nianlin" value="25">25</option>#}
+{#                <option name="nianlin" value="26">26</option>#}
+{#                <option name="nianlin" value="27">27</option>#}
+{#                <option name="nianlin" value="28">28</option>#}
+{#                           </select>#}
+            </td>
+          </tr>
+
+          <tr>
+            <td>简介:</td>
+          </tr>
+
+          <tr>
+            <td><textarea name="text1" id="text1" rows="6" cols="51">在此填写你最近两年来的工作经历。</textarea></td>
+          </tr>
+
+          <tr align="center">
+         <td><input type="submit" name="tijiao" id="tijiao" value="确认注册" />
+         <input type="reset" name="qingchu" id="qingchu" value="重新填写" /></td>
+          </tr>
+         </table>
+        </form>
+    </body>
+</html>
