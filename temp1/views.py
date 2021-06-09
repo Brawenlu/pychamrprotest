@@ -25,3 +25,6 @@ def addusers(request):
 def md5js(request):
     return render(request,'temp1/md5.js', {})
 
+def h5(request):
+    return  render(request,'temp1/h5.html', {})
+
